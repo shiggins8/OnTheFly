@@ -3,7 +3,7 @@
 //  On The FlyUITests
 //
 //  Created by Scott Higgins on 1/18/17.
-//  Copyright © 2017 Team 152 - Easily The Best. All rights reserved.
+//  Copyright © 2017 ScottieH. All rights reserved.
 //
 
 import XCTest

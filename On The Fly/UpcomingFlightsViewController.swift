@@ -3,7 +3,7 @@
 //  On The Fly
 //
 //  Created by Scott Higgins on 1/19/17.
-//  Copyright © 2017 Team 152 - Easily The Best. All rights reserved.
+//  Copyright © 2017 ScottieH. All rights reserved.
 //
 
 import UIKit
