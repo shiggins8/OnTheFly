@@ -21,6 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FIRApp.configure()
         FIRDatabase.database().persistenceEnabled = true
         
+        // Simple call to apply the current saved theme (see Theme.swift for theme details)
+//        if let selectedTheme = Theme(rawValue: 0) {
+//            selectedTheme.apply()
+//        }
+        
+        
 //        in order to use, import TouchVisualizer above
 //        var config = Configuration()
 //        config.color = UIColor.red
