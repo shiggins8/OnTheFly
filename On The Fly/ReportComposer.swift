@@ -36,6 +36,9 @@ class ReportComposer: NSObject {
             // The timestamp.
             HTMLContent = HTMLContent.replacingOccurrences(of: "#TIME_STAMP#", with: timeStamp)
             
+            // Flight itenerary.
+            HTMLContent = HTMLContent.replacingOccurrences(of: "#FLIGHT_ITENERARY#", with: flight.getFlightItenerary())
+            
             // The graph itself.
             HTMLContent = HTMLContent.replacingOccurrences(of: "#COG_GRAPH#", with: "file://" + imagePath)
             
@@ -46,7 +49,7 @@ class ReportComposer: NSObject {
             HTMLContent = HTMLContent.replacingOccurrences(of: "#BEW#", with: "\(plane.emptyWeight)")
             
             // Total passenger weight.
-            HTMLContent = HTMLContent.replacingOccurrences(of: "#TOTAL_PASS_WEIGHT#", with: "1200")
+            HTMLContent = HTMLContent.replacingOccurrences(of: "#TOTAL_PASS_WEIGHT#", with: "\(flight.calcTotalPaxWeight())")
             
             // Cargo holds.
             HTMLContent = HTMLContent.replacingOccurrences(of: "#FRONT_CARGO_HOLD#", with: "\(flight.frontBaggageWeight)")
@@ -66,6 +69,23 @@ class ReportComposer: NSObject {
             
             // Zero fuel weight.
             HTMLContent = HTMLContent.replacingOccurrences(of: "#ZERO_FUEL_WEIGHT#", with: "\(flight.calcZeroFuelWeight(plane: plane))")
+            
+            //CoG Data Table
+            HTMLContent = HTMLContent.replacingOccurrences(of: "#TAKEOFF_WEIGHT#", with: "95.0")
+            
+            HTMLContent = HTMLContent.replacingOccurrences(of: "#TAKEOFF_FWD_LIMIT#", with: "95.0")
+            
+            HTMLContent = HTMLContent.replacingOccurrences(of: "#TAKEOFF_COG#", with: "95.0")
+            
+            HTMLContent = HTMLContent.replacingOccurrences(of: "#TAKEOFF_AFT_LIMIT#", with: "95.0")
+            
+            HTMLContent = HTMLContent.replacingOccurrences(of: "#LANDING_WEIGHT#", with: "95.0")
+            
+            HTMLContent = HTMLContent.replacingOccurrences(of: "#LANDING_FWD_LIMIT", with: "95.0")
+            
+            HTMLContent = HTMLContent.replacingOccurrences(of: "#LANDING_COG#", with: "95.0")
+            
+            HTMLContent = HTMLContent.replacingOccurrences(of: "#LANDING_AFT_LIMIT#", with: "95.0")
             
             // The HTML code is ready.
             return HTMLContent

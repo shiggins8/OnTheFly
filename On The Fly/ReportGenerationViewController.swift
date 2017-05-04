@@ -114,6 +114,9 @@ class ReportGenerationViewController: UIViewController, UITextFieldDelegate {
             print("flight graph couldn't be saved")
         }
         
+        print("COG Take: \(self.flight!.calcTakeoffCenterOfGravity(plane: self.plane!))" )
+        print("COG: Land: \(self.flight!.calcLandingCenterOfGravity(plane: self.plane!))" )
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

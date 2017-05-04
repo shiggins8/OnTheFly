@@ -165,6 +165,18 @@ struct Flight {
         return moment / weight
     }
     
+    func calcTotalPaxWeight() -> Double {
+        var totalWeight: Double = 0.0
+        for each in self.passengers!.values {
+            totalWeight += each["weight"] as! Double
+        }
+        return totalWeight
+    }
+    
+    func getFlightItenerary() -> String {
+        return "\(self.departAirport) to \(self.arriveAirport) on \(self.date)"
+    }
+    
     func weightForSeatIndex(index: Int) -> Double {
         let key = "seat\(index + 1)"
         var weightToReturn = 0.0
