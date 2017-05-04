@@ -79,14 +79,17 @@ class ReportGenerationViewController: UIViewController, UITextFieldDelegate {
         
         let dataset = LineChartDataSet(values: ySeries, label: "CoG Envelope")
         dataset.colors = [NSUIColor.blue]
+        dataset.circleRadius = 4.0
         data.addDataSet(dataset)
         
         let dataset2 = LineChartDataSet(values: bottomConnectorSeries, label: "Lower Limit")
         dataset2.colors = [NSUIColor.red]
+        dataset2.circleRadius = 4.0
         data.addDataSet(dataset2)
         
         let dataset3 = LineChartDataSet(values: cogSeries, label: "Flight Shift")
         dataset3.colors = [NSUIColor.darkGray]
+        dataset3.circleRadius = 4.0
         data.addDataSet(dataset3)
         
         self.lineChartView.data = data
