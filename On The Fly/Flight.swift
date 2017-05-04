@@ -159,9 +159,6 @@ struct Flight {
         
         moment -= (Double(flightDuration) * fuelFlow / 10.0) * plane.fuelArm
         
-//        print("moment: ", moment)
-//        print("weight: ", weight)
-        
         return moment / weight
     }
     
@@ -171,6 +168,50 @@ struct Flight {
             totalWeight += each["weight"] as! Double
         }
         return totalWeight
+    }
+    
+    func calcTakeoffLimits(plane: Plane) -> [Double] {
+        var takeoffLimits: [Double] = []
+        let envData = plane.centerOfGravityEnvelope
+        let takeoffWeight = self.calcTakeoffWeight(plane: plane)
+        let a = CGPoint(x: 0.0, y: takeoffWeight)
+        let b = CGPoint(x: 30000.0, y: takeoffWeight)
+        for i in 0...envData.count {
+            if i + 1 < envData.count {
+                let curPoint = envData[i]
+                let nextPoint = envData[i+1]
+                let c = CGPoint(x: curPoint["x"]!, y: curPoint["y"]!)
+                let d = CGPoint(x: nextPoint["x"]!, y: nextPoint["y"]!)
+                let intersection = getIntersectionOfLines(line1: (a: a, b: b), line2: (a: c, b: d))
+                if intersection != CGPoint.zero {
+                    takeoffLimits.append(Double(intersection.x).roundTo(places: 1))
+                }
+            }
+        }
+        print(takeoffLimits)
+        return(takeoffLimits)
+    }
+    
+    func calcLandingLimits(plane: Plane) -> [Double] {
+        var landingLimits: [Double] = []
+        let envData = plane.centerOfGravityEnvelope
+        let landingWeight = self.calcLandingWeight(plane: plane)
+        let a = CGPoint(x: 0.0, y: landingWeight)
+        let b = CGPoint(x: 30000.0, y: landingWeight)
+        for i in 0...envData.count {
+            if i + 1 < envData.count {
+                let curPoint = envData[i]
+                let nextPoint = envData[i+1]
+                let c = CGPoint(x: curPoint["x"]!, y: curPoint["y"]!)
+                let d = CGPoint(x: nextPoint["x"]!, y: nextPoint["y"]!)
+                let intersection = getIntersectionOfLines(line1: (a: a, b: b), line2: (a: c, b: d))
+                if intersection != CGPoint.zero {
+                    landingLimits.append(Double(intersection.x).roundTo(places: 1))
+                }
+            }
+        }
+        print(landingLimits)
+        return(landingLimits)
     }
     
     func getFlightItenerary() -> String {
@@ -266,4 +307,28 @@ struct Flight {
         }
     }
     
+}
+
+extension Flight {
+    func getIntersectionOfLines(line1: (a: CGPoint, b: CGPoint), line2: (a: CGPoint, b: CGPoint)) -> CGPoint {
+        let distance = (line1.b.x - line1.a.x) * (line2.b.y - line2.a.y) - (line1.b.y - line1.a.y) * (line2.b.x - line2.a.x)
+        if distance == 0 {
+            print("error, parallel lines")
+            return CGPoint.zero
+        }
+        
+        let u = ((line2.a.x - line1.a.x) * (line2.b.y - line2.a.y) - (line2.a.y - line1.a.y) * (line2.b.x - line2.a.x)) / distance
+        let v = ((line2.a.x - line1.a.x) * (line1.b.y - line1.a.y) - (line2.a.y - line1.a.y) * (line1.b.x - line1.a.x)) / distance
+        
+        if (u < 0.0 || u > 1.0) {
+            print("error, intersection not inside line1")
+            return CGPoint.zero
+        }
+        if (v < 0.0 || v > 1.0) {
+            print("error, intersection not inside line2")
+            return CGPoint.zero
+        }
+        
+        return CGPoint(x: (line1.a.x + u * (line1.b.x - line1.a.x)), y: (line1.a.y + u * (line1.b.y - line1.a.y)))
+    }
 }

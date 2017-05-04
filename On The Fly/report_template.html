@@ -7,63 +7,67 @@
             h1 {
                 text-align: center;
             }
-        h3 {
-            font-style: italic;
-            padding: 2px;
-            margin: 2px;
-        }
-        #cog-graph {
-            width: 300px;
-            height: 320px;
-            float: left;
-        }
-        #cog-stats {
-            float: right;
-        }
-        #stat-data {
-            width: 500px;
-            border: 1px;
-        }
-        .clearfloat {
-            clear: both;
-        }
-        table, th, tbody, td {
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-        #flight-info td {
-            padding: 2px;
-        }
-        #cog-stats-table {
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-        #cog-stats-table th {
-            background-color: black;
-            padding: 10px;
-            margin: 1px 7px 1px 7px;
-            color: white;
-        }
-        #cog-stats-table tr, td {
-            padding: 5px;
-            margin: 3px;
-        }
-        #takeoffrow {
-            background-color: #0B7F12;
-            color: white;
-            text-align: center;
-        }
-        #landingrow {
-            background-color: #0B24FB;
-            color: white;
-            text-align: center;
-        }
-        .bold {
-            font-weight: bold;
-        }
-        .extratopmargin {
-            margin-top: 10px;
-        }
+            h3 {
+                font-style: italic;
+                padding: 2px;
+                margin: 2px;
+            }
+            #cog-graph {
+                width: 300px;
+                height: 320px;
+                margin: auto;
+                display: block;
+            }
+            #cog-stats {
+                float: right;
+            }
+            #stat-data {
+                width: 500px;
+                border: 1px;
+            }
+            .clearfloat {
+                clear: both;
+            }
+            table, th, tbody, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            #flight-info {
+                float: left;
+            }
+            #flight-info td {
+                padding: 2px;
+            }
+            #cog-stats-table {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            #cog-stats-table th {
+                background-color: black;
+                padding: 10px;
+                margin: 1px 7px 1px 7px;
+                color: white;
+            }
+            #cog-stats-table tr, td {
+                padding: 5px;
+                margin: 3px;
+            }
+            #takeoffrow {
+                background-color: #0B7F12;
+                color: white;
+                text-align: center;
+            }
+            #landingrow {
+                background-color: #0B24FB;
+                color: white;
+                text-align: center;
+            }
+            .bold {
+                font-weight: bold;
+            }
+            .extratopmargin {
+                margin-top: 10px;
+            }
         </style>
     </head>
     
@@ -77,15 +81,64 @@
         <h3 class="extratopmargin">Center of Gravity Graph:</h3>
         
         <div>
-            
             <img id="cog-graph" alt="" src="#COG_GRAPH#"/>
+        </div>
+        
+        <div>
+            <h3 class="extratopmargin">Flight Statistics:</h3>
+            
+            <table id="flight-info">
+                <tbody>
+                    <tr>
+                        <td class="bold">Aircraft Tail Number</td>
+                        <td>#TAIL_NUMBER#</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">BEW</td>
+                        <td>#BEW#</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Total Weight of Passengers</td>
+                        <td>#TOTAL_PASS_WEIGHT#</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Front Cargo Hold</td>
+                        <td>#FRONT_CARGO_HOLD#</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Aft Cargo Hold</td>
+                        <td>#AFT_CARGO_HOLD#</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Feul Units</td>
+                        <td>Gallons</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Fuel Tank</td>
+                        <td>#FUEL_TANK#</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Fuel Burn</td>
+                        <td>#FUEL_BURN#</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Taxi Fuel Burn</td>
+                        <td>#TAXI_BURN#</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Max. Takeoff Weight</td>
+                        <td>#MAX_TO_WEIGHT#</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Zero Fuel Weight</td>
+                        <td>#ZERO_FUEL_WEIGHT#</td>
+                    </tr>
+                </tbody>
+            </table>
             
             <div id="cog-stats">
-                
-                <br><br><br><br><br><br><br>
-                
+                <br><br><br><br>
                 <table id="cog-stats-table">
-                    
                     <tbody>
                         <tr>
                             <th></th>
@@ -94,7 +147,6 @@
                             <th>C.o.G.</th>
                             <th>Aft Limit</th>
                         </tr>
-                        
                         <tr id="takeoffrow">
                             <td>Takeoff</td>
                             <td>#TAKEOFF_WEIGHT#</td>
@@ -102,7 +154,6 @@
                             <td>#TAKEOFF_COG#</td>
                             <td>#TAKEOFF_AFT_LIMIT#</td>
                         </tr>
-                        
                         <tr id="landingrow">
                             <td>Landing</td>
                             <td>#LANDING_WEIGHT#</td>
@@ -110,67 +161,9 @@
                             <td>#LANDING_COG#</td>
                             <td>#LANDING_AFT_LIMIT#</td>
                         </tr>
-                        
                     </tbody>
-                    
                 </table>
-                
-                
             </div>
-            
         </div>
-        
-        <div class="clearfloat"></div>
-        
-        <h3 class="extratopmargin">Flight Statistics:</h3>
-        
-        <table id="flight-info">
-            <tbody>
-                <tr>
-                    <td class="bold">Aircraft Tail Number</td>
-                    <td>#TAIL_NUMBER#</td>
-                </tr>
-                <tr>
-                    <td class="bold">BEW</td>
-                    <td>#BEW#</td>
-                </tr>
-                <tr>
-                    <td class="bold">Total Weight of Passengers</td>
-                    <td>#TOTAL_PASS_WEIGHT#</td>
-                </tr>
-                <tr>
-                    <td class="bold">Front Cargo Hold</td>
-                    <td>#FRONT_CARGO_HOLD#</td>
-                </tr>
-                <tr>
-                    <td class="bold">Aft Cargo Hold</td>
-                    <td>#AFT_CARGO_HOLD#</td>
-                </tr>
-                <tr>
-                    <td class="bold">Feul Units</td>
-                    <td>Gallons</td>
-                </tr>
-                <tr>
-                    <td class="bold">Fuel Tank</td>
-                    <td>#FUEL_TANK#</td>
-                </tr>
-                <tr>
-                    <td class="bold">Fuel Burn</td>
-                    <td>#FUEL_BURN#</td>
-                </tr>
-                <tr>
-                    <td class="bold">Taxi Fuel Burn</td>
-                    <td>#TAXI_BURN#</td>
-                </tr>
-                <tr>
-                    <td class="bold">Max. Takeoff Weight</td>
-                    <td>#MAX_TO_WEIGHT#</td>
-                </tr>
-                <tr>
-                    <td class="bold">Zero Fuel Weight</td>
-                    <td>#ZERO_FUEL_WEIGHT#</td>
-                </tr>
-            </tbody>
-        </table>
     </body>
 </html>

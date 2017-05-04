@@ -71,21 +71,30 @@ class ReportComposer: NSObject {
             HTMLContent = HTMLContent.replacingOccurrences(of: "#ZERO_FUEL_WEIGHT#", with: "\(flight.calcZeroFuelWeight(plane: plane))")
             
             //CoG Data Table
-            HTMLContent = HTMLContent.replacingOccurrences(of: "#TAKEOFF_WEIGHT#", with: "95.0")
+            var takeoffLimits = self.flight.calcTakeoffLimits(plane: self.plane)
+            if takeoffLimits.count != 2 {
+                takeoffLimits = [0.0, 0.0]
+            }
+            var landingLimits = self.flight.calcLandingLimits(plane: self.plane)
+            if landingLimits.count != 2 {
+                landingLimits = [0.0, 0.0]
+            }
             
-            HTMLContent = HTMLContent.replacingOccurrences(of: "#TAKEOFF_FWD_LIMIT#", with: "95.0")
+            HTMLContent = HTMLContent.replacingOccurrences(of: "#TAKEOFF_WEIGHT#", with: "\(flight.calcTakeoffWeight(plane: plane))")
             
-            HTMLContent = HTMLContent.replacingOccurrences(of: "#TAKEOFF_COG#", with: "95.0")
+            HTMLContent = HTMLContent.replacingOccurrences(of: "#TAKEOFF_FWD_LIMIT#", with: "\(takeoffLimits[0])")
             
-            HTMLContent = HTMLContent.replacingOccurrences(of: "#TAKEOFF_AFT_LIMIT#", with: "95.0")
+            HTMLContent = HTMLContent.replacingOccurrences(of: "#TAKEOFF_COG#", with: "\(flight.calcTakeoffCenterOfGravity(plane: plane).roundTo(places: 2))")
             
-            HTMLContent = HTMLContent.replacingOccurrences(of: "#LANDING_WEIGHT#", with: "95.0")
+            HTMLContent = HTMLContent.replacingOccurrences(of: "#TAKEOFF_AFT_LIMIT#", with: "\(takeoffLimits[1])")
             
-            HTMLContent = HTMLContent.replacingOccurrences(of: "#LANDING_FWD_LIMIT", with: "95.0")
+            HTMLContent = HTMLContent.replacingOccurrences(of: "#LANDING_WEIGHT#", with: "\(flight.calcLandingWeight(plane: plane))")
             
-            HTMLContent = HTMLContent.replacingOccurrences(of: "#LANDING_COG#", with: "95.0")
+            HTMLContent = HTMLContent.replacingOccurrences(of: "#LANDING_FWD_LIMIT#", with: "\(landingLimits[0])")
             
-            HTMLContent = HTMLContent.replacingOccurrences(of: "#LANDING_AFT_LIMIT#", with: "95.0")
+            HTMLContent = HTMLContent.replacingOccurrences(of: "#LANDING_COG#", with: "\(flight.calcLandingCenterOfGravity(plane: plane).roundTo(places: 2))")
+            
+            HTMLContent = HTMLContent.replacingOccurrences(of: "#LANDING_AFT_LIMIT#", with: "\(landingLimits[1])")
             
             // The HTML code is ready.
             return HTMLContent
