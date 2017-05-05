@@ -1370,8 +1370,11 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="W &amp; B Report" id="MZ5-Ki-sSG">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="BUh-s0-IjP">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="BUh-s0-IjP">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="backPressed:" destination="osF-aw-xvC" id="ZIq-Pn-mrs"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Preview" id="qwN-we-wuF">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -41,7 +41,6 @@ class FlightDetailsViewController: UIViewController, UITextFieldDelegate {
         
         self.applyUserInterfaceChanges()
         self.loadFlightDetails()
-        registerForKeyboardNotifications()
         
         flightDatePicker.addTarget(self, action: #selector(FlightDetailsViewController.datePickerValueChanged(_:)), for: UIControlEvents.valueChanged)
         
@@ -50,8 +49,8 @@ class FlightDetailsViewController: UIViewController, UITextFieldDelegate {
 
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    override func viewWillAppear(_ animated: Bool) {
+        registerForKeyboardNotifications()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

@@ -285,6 +285,10 @@ class ReportGenerationViewController: UIViewController, UITextFieldDelegate {
             previewVC.reportHtml = self.reportCreator.renderReport(imagePath: self.flightGraphPath!)
         }
     }
+    
+    @IBAction func backPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 
 }
 
