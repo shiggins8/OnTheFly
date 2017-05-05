@@ -188,7 +188,6 @@ struct Flight {
                 }
             }
         }
-        print(takeoffLimits)
         return(takeoffLimits)
     }
     
@@ -210,7 +209,6 @@ struct Flight {
                 }
             }
         }
-        print(landingLimits)
         return(landingLimits)
     }
     
