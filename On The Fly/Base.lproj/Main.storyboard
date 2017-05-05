@@ -1360,8 +1360,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="950"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mE4-26-lBs">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.29019607843137252" green="0.45882352941176469" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.29019607843137252" green="0.45882352941176469" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="W &amp; B Report" id="MZ5-Ki-sSG">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="BUh-s0-IjP">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Preview" id="qwN-we-wuF">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="LCr-oF-Bjm" kind="show" identifier="reportPreviewSegue" id="miY-oL-vmz"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdj-Ng-cRe">
-                                <rect key="frame" x="0.0" y="28" width="375" height="922"/>
+                                <rect key="frame" x="0.0" y="74" width="375" height="876"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="REa-o3-FWM">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="950"/>
@@ -1461,7 +1483,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTv-mr-RBH">
-                                                <rect key="frame" x="137" y="848" width="100" height="45"/>
+                                                <rect key="frame" x="137" y="838" width="100" height="45"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="pHG-wo-I4S"/>
@@ -1492,7 +1514,7 @@
                                             <constraint firstItem="g75-88-UCZ" firstAttribute="centerX" secondItem="REa-o3-FWM" secondAttribute="centerX" id="S7c-1t-l5G"/>
                                             <constraint firstItem="juB-51-2QI" firstAttribute="top" secondItem="Z1Y-qc-4WG" secondAttribute="bottom" constant="8" id="STk-lj-feQ"/>
                                             <constraint firstItem="f4e-c9-8Z2" firstAttribute="top" secondItem="qYs-Vh-D6E" secondAttribute="bottom" constant="15" id="UI6-R3-kLX"/>
-                                            <constraint firstItem="qTv-mr-RBH" firstAttribute="top" secondItem="f4e-c9-8Z2" secondAttribute="bottom" constant="35" id="Whw-mj-tNz"/>
+                                            <constraint firstItem="qTv-mr-RBH" firstAttribute="top" secondItem="f4e-c9-8Z2" secondAttribute="bottom" constant="25" id="Whw-mj-tNz"/>
                                             <constraint firstItem="kOv-0t-Bta" firstAttribute="top" secondItem="jot-hV-iXY" secondAttribute="bottom" constant="28" id="a9f-5y-edU"/>
                                             <constraint firstItem="5ij-cw-W61" firstAttribute="top" secondItem="REa-o3-FWM" secondAttribute="top" id="dqu-g7-pqO"/>
                                             <constraint firstItem="kOv-0t-Bta" firstAttribute="leading" secondItem="juB-51-2QI" secondAttribute="leading" id="fOo-SU-BZl"/>
@@ -1518,8 +1540,11 @@
                             <constraint firstItem="jdj-Ng-cRe" firstAttribute="leading" secondItem="Y93-lw-xGJ" secondAttribute="leading" id="1Fg-vc-EJg"/>
                             <constraint firstItem="REa-o3-FWM" firstAttribute="width" secondItem="Y93-lw-xGJ" secondAttribute="width" id="7cX-mw-bbp"/>
                             <constraint firstAttribute="trailing" secondItem="jdj-Ng-cRe" secondAttribute="trailing" id="FqM-ob-QCl"/>
-                            <constraint firstItem="jdj-Ng-cRe" firstAttribute="top" secondItem="SPi-Ux-aRx" secondAttribute="bottom" constant="8" id="Grn-4E-h6s"/>
+                            <constraint firstItem="mE4-26-lBs" firstAttribute="centerX" secondItem="Y93-lw-xGJ" secondAttribute="centerX" id="MdX-eG-DZS"/>
+                            <constraint firstItem="jdj-Ng-cRe" firstAttribute="top" secondItem="mE4-26-lBs" secondAttribute="bottom" constant="10" id="fwp-17-QFX"/>
+                            <constraint firstItem="mE4-26-lBs" firstAttribute="leading" secondItem="jdj-Ng-cRe" secondAttribute="leading" id="rDt-m6-Aox"/>
                             <constraint firstItem="kvj-hv-Mzs" firstAttribute="top" secondItem="jdj-Ng-cRe" secondAttribute="bottom" id="voN-n9-Hgz"/>
+                            <constraint firstItem="mE4-26-lBs" firstAttribute="top" secondItem="SPi-Ux-aRx" secondAttribute="bottom" id="yQf-hT-3T2"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -1538,6 +1563,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x8T-R1-tMJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2373.5999999999999" y="1705.5472263868066"/>
+        </scene>
+        <!--Report Preview View Controller-->
+        <scene sceneID="3ap-mp-ogg">
+            <objects>
+                <viewController id="LCr-oF-Bjm" customClass="ReportPreviewViewController" customModule="On_The_Fly" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OOP-xq-9gy"/>
+                        <viewControllerLayoutGuide type="bottom" id="YcH-fn-hgk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cTZ-wU-0JY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQf-Lg-dRO">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Report Preview" id="Ugc-QL-Nnv">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="zL9-Z2-Jm1">
+                                            <connections>
+                                                <action selector="donePressed:" destination="LCr-oF-Bjm" id="XHp-XD-akE"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JNd-MG-gg3">
+                                <rect key="frame" x="0.0" y="77" width="375" height="590"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JNd-MG-gg3" firstAttribute="top" secondItem="OQf-Lg-dRO" secondAttribute="bottom" constant="5" id="7Xg-pP-jIF"/>
+                            <constraint firstItem="JNd-MG-gg3" firstAttribute="leading" secondItem="cTZ-wU-0JY" secondAttribute="leading" id="CNb-Pj-00N"/>
+                            <constraint firstItem="OQf-Lg-dRO" firstAttribute="top" secondItem="OOP-xq-9gy" secondAttribute="bottom" constant="8" id="Dhk-SW-XVy"/>
+                            <constraint firstItem="YcH-fn-hgk" firstAttribute="top" secondItem="JNd-MG-gg3" secondAttribute="bottom" id="bxT-EC-1xE"/>
+                            <constraint firstAttribute="trailing" secondItem="JNd-MG-gg3" secondAttribute="trailing" id="dAn-YF-Dnd"/>
+                            <constraint firstAttribute="trailing" secondItem="OQf-Lg-dRO" secondAttribute="trailing" id="id7-BS-V8C"/>
+                            <constraint firstItem="OQf-Lg-dRO" firstAttribute="leading" secondItem="cTZ-wU-0JY" secondAttribute="leading" id="tsZ-9K-0pG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="z3N-bM-RVT"/>
+                    <connections>
+                        <outlet property="reportWebView" destination="JNd-MG-gg3" id="KFf-Yh-70N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hBe-2g-GbI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3460" y="1747"/>
         </scene>
         <!--Cargo View Controller-->
         <scene sceneID="doI-uM-76Z">

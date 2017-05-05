@@ -33,6 +33,7 @@
 		C3CAF6111E3132DF00A17817 /* UpcomingFlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CAF6101E3132DF00A17817 /* UpcomingFlightsViewController.swift */; };
 		C3E202D21E7B79A900F2CE69 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E202CD1E7B797900F2CE69 /* Charts.framework */; };
 		C3E202D31E7B79A900F2CE69 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3E202CD1E7B797900F2CE69 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C3F24D2E1EBC196400A47431 /* ReportPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F24D2D1EBC196400A47431 /* ReportPreviewViewController.swift */; };
 		C3FF5AC91E3EE6ED00D1A96E /* PaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FF5AC81E3EE6ED00D1A96E /* PaddedTextField.swift */; };
 		C3FF6FBB1E306C0600C59DB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FF6FBA1E306C0600C59DB3 /* AppDelegate.swift */; };
 		C3FF6FBD1E306C0600C59DB3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FF6FBC1E306C0600C59DB3 /* LoginViewController.swift */; };
@@ -137,6 +138,7 @@
 		C3B601F91EAFFB2700D356EA /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Theme.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		C3CAF6101E3132DF00A17817 /* UpcomingFlightsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = UpcomingFlightsViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		C3E202C61E7B797800F2CE69 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "Charts-master/Charts.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		C3F24D2D1EBC196400A47431 /* ReportPreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportPreviewViewController.swift; sourceTree = "<group>"; };
 		C3FF5AC81E3EE6ED00D1A96E /* PaddedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PaddedTextField.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		C3FF6FB71E306C0600C59DB3 /* On The Fly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "On The Fly.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3FF6FBA1E306C0600C59DB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -252,6 +254,7 @@
 				C36CAD141E39A470008C685E /* ForgotPasswordViewController.swift */,
 				C35FBA3D1E3AED3700A53888 /* ReportGenerationViewController.swift */,
 				C3174EFE1E5BCF5C009C2545 /* CargoViewController.swift */,
+				C3F24D2D1EBC196400A47431 /* ReportPreviewViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -667,6 +670,7 @@
 				C39B65F91E6F62D100A4CA8A /* FlightDetailsViewController.swift in Sources */,
 				C38FBBD21E4B918B0087F9CA /* User.swift in Sources */,
 				C35FBA3E1E3AED3700A53888 /* ReportGenerationViewController.swift in Sources */,
+				C3F24D2E1EBC196400A47431 /* ReportPreviewViewController.swift in Sources */,
 				C3FF6FBB1E306C0600C59DB3 /* AppDelegate.swift in Sources */,
 				C30757901E501E0700DFD493 /* UpcomingFlightTableViewCell.swift in Sources */,
 				C33B9CA61E38671500AF47A6 /* CreateNewFlightViewController.swift in Sources */,

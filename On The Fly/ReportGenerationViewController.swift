@@ -41,8 +41,6 @@ class ReportGenerationViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        registerForKeyboardNotifications()
-        
         emailTextfield.roundCorners()
         addKeyboardToolBar(textField: emailTextfield)
         
@@ -125,6 +123,8 @@ class ReportGenerationViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         self.lineChartView.animate(xAxisDuration: 0.5, yAxisDuration: 0.5)
+        
+        registerForKeyboardNotifications()
         
         if let userid = FIRAuth.auth()?.currentUser?.uid {
             let ref = FIRDatabase.database().reference().child("users")
@@ -222,7 +222,7 @@ class ReportGenerationViewController: UIViewController, UITextFieldDelegate {
         if let activeField = self.activeField {
             if (!aRect.contains(activeField.frame.origin) || !aRect.contains(point2)){
                 print("part of view at least covered")
-                let yOffset = abs(aRect.origin.y + aRect.height - point2.y) + 30
+                let yOffset = abs(aRect.origin.y + aRect.height - point2.y) + 80
                 self.scrollView.setContentOffset(CGPoint(x: 0, y: yOffset), animated: true)
             } else {
                 print("nothing covered")
@@ -276,6 +276,15 @@ class ReportGenerationViewController: UIViewController, UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         self.activeField = nil
     }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "reportPreviewSegue" {
+            let previewVC = segue.destination as! ReportPreviewViewController
+            previewVC.reportHtml = self.reportCreator.renderReport(imagePath: self.flightGraphPath!)
+        }
+    }
 
 }
 
@@ -288,7 +297,6 @@ extension ReportGenerationViewController: MFMailComposeViewControllerDelegate {
 extension ReportGenerationViewController: UIWebViewDelegate {
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
-        print("finished loading")
         let frame = self.webView.frame
         self.webView.frame = CGRect.zero
         self.webView.frame = frame
