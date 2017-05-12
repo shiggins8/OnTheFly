@@ -338,7 +338,7 @@
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="Dpt Arpt">
                                                                             <attributes>
-                                                                                <font key="NSFont" metaFont="system" size="17"/>
+                                                                                <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
                                                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                             </attributes>
                                                                         </fragment>
@@ -350,7 +350,7 @@
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="Arr Arpt">
                                                                             <attributes>
-                                                                                <font key="NSFont" metaFont="system" size="17"/>
+                                                                                <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
                                                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                             </attributes>
                                                                         </fragment>
@@ -367,7 +367,7 @@
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="Label">
                                                                             <attributes>
-                                                                                <font key="NSFont" metaFont="system" size="17"/>
+                                                                                <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
                                                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                             </attributes>
                                                                         </fragment>
@@ -379,7 +379,7 @@
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="Label">
                                                                             <attributes>
-                                                                                <font key="NSFont" metaFont="system" size="17"/>
+                                                                                <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
                                                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                             </attributes>
                                                                         </fragment>
@@ -391,7 +391,7 @@
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="Label">
                                                                             <attributes>
-                                                                                <font key="NSFont" metaFont="system" size="17"/>
+                                                                                <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
                                                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                             </attributes>
                                                                         </fragment>
@@ -408,7 +408,7 @@
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="Dpt Time">
                                                                             <attributes>
-                                                                                <font key="NSFont" metaFont="system" size="17"/>
+                                                                                <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
                                                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                             </attributes>
                                                                         </fragment>
@@ -420,7 +420,7 @@
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="Arr Time">
                                                                             <attributes>
-                                                                                <font key="NSFont" metaFont="system" size="17"/>
+                                                                                <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
                                                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                             </attributes>
                                                                         </fragment>
@@ -432,7 +432,7 @@
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="A/C No">
                                                                             <attributes>
-                                                                                <font key="NSFont" metaFont="system" size="17"/>
+                                                                                <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
                                                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                             </attributes>
                                                                         </fragment>
@@ -449,7 +449,7 @@
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="Label">
                                                                             <attributes>
-                                                                                <font key="NSFont" metaFont="system" size="17"/>
+                                                                                <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
                                                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                             </attributes>
                                                                         </fragment>
@@ -461,7 +461,7 @@
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="Label">
                                                                             <attributes>
-                                                                                <font key="NSFont" metaFont="system" size="17"/>
+                                                                                <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
                                                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                             </attributes>
                                                                         </fragment>
@@ -473,7 +473,7 @@
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="Label">
                                                                             <attributes>
-                                                                                <font key="NSFont" metaFont="system" size="17"/>
+                                                                                <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
                                                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                             </attributes>
                                                                         </fragment>
@@ -1150,7 +1150,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6G-aK-8Ua">
-                                <rect key="frame" x="19" y="152.5" width="337" height="434.5"/>
+                                <rect key="frame" x="19" y="152.5" width="337" height="394.5"/>
                                 <connections>
                                     <segue destination="ZEK-ft-YW3" kind="embed" identifier="embedCargoView" id="78E-rc-8ba"/>
                                 </connections>
@@ -1170,7 +1170,7 @@
                                 </connections>
                             </button>
                             <collectionView hidden="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QE9-BZ-01j" customClass="WiggleUICollectionView" customModule="On_The_Fly" customModuleProvider="target">
-                                <rect key="frame" x="19" y="152.5" width="337" height="434.5"/>
+                                <rect key="frame" x="19" y="152.5" width="337" height="394.5"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="15" id="ZuY-dv-N5F">
                                     <size key="itemSize" width="123" height="109"/>
@@ -1297,6 +1297,12 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Over Max Weight by 100 lbs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93Z-eT-Ns8">
+                                <rect key="frame" x="5" y="555" width="365" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.2901960784" green="0.45882352939999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -1305,6 +1311,7 @@
                             <constraint firstItem="CWU-4N-CF3" firstAttribute="centerY" secondItem="QlH-aK-dgZ" secondAttribute="centerY" id="7Ev-F3-fls"/>
                             <constraint firstItem="CWU-4N-CF3" firstAttribute="leading" secondItem="QlH-aK-dgZ" secondAttribute="trailing" constant="8" id="7lE-r6-hE7"/>
                             <constraint firstItem="ZH2-nI-9G4" firstAttribute="top" secondItem="nm7-ll-iYW" secondAttribute="bottom" constant="3" id="9fj-Dq-Fgr"/>
+                            <constraint firstItem="gXp-bj-j7s" firstAttribute="top" secondItem="93Z-eT-Ns8" secondAttribute="bottom" constant="8" id="Auh-pk-bgy"/>
                             <constraint firstItem="QE9-BZ-01j" firstAttribute="top" secondItem="NHA-bS-nRC" secondAttribute="bottom" constant="8" id="Cjr-qV-VhW"/>
                             <constraint firstItem="QlH-aK-dgZ" firstAttribute="top" secondItem="ZH2-nI-9G4" secondAttribute="bottom" constant="3" id="LIl-XM-a5S"/>
                             <constraint firstAttribute="trailingMargin" secondItem="A6G-aK-8Ua" secondAttribute="trailing" constant="3" id="Mg5-fC-D5O"/>
@@ -1315,22 +1322,25 @@
                             <constraint firstItem="A6G-aK-8Ua" firstAttribute="top" secondItem="NHA-bS-nRC" secondAttribute="bottom" constant="8" id="c8P-a8-uOw"/>
                             <constraint firstItem="NHA-bS-nRC" firstAttribute="top" secondItem="QlH-aK-dgZ" secondAttribute="bottom" constant="8" id="cDC-Hu-NqF"/>
                             <constraint firstItem="gXp-bj-j7s" firstAttribute="top" secondItem="naj-Kd-yz8" secondAttribute="bottom" constant="15" id="cbw-oB-Uv0"/>
-                            <constraint firstItem="gXp-bj-j7s" firstAttribute="top" secondItem="QE9-BZ-01j" secondAttribute="bottom" constant="15" id="etd-vL-LNV"/>
+                            <constraint firstItem="gXp-bj-j7s" firstAttribute="top" secondItem="QE9-BZ-01j" secondAttribute="bottom" constant="55" id="etd-vL-LNV"/>
                             <constraint firstItem="ZH2-nI-9G4" firstAttribute="leading" secondItem="lBC-Cd-P8x" secondAttribute="leading" id="g9T-PL-mMm"/>
                             <constraint firstItem="b2w-aM-Ful" firstAttribute="centerY" secondItem="QlH-aK-dgZ" secondAttribute="centerY" id="gGS-BV-Lr0"/>
                             <constraint firstAttribute="trailing" secondItem="ZH2-nI-9G4" secondAttribute="trailing" id="gn2-WD-dQm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NHA-bS-nRC" secondAttribute="trailing" constant="3" id="gsG-6A-HRa"/>
+                            <constraint firstItem="93Z-eT-Ns8" firstAttribute="top" secondItem="QE9-BZ-01j" secondAttribute="bottom" constant="8" id="jAT-Kc-1Bs"/>
                             <constraint firstItem="NHA-bS-nRC" firstAttribute="leading" secondItem="lBC-Cd-P8x" secondAttribute="leadingMargin" constant="3" id="jYh-EA-54L"/>
                             <constraint firstItem="naj-Kd-yz8" firstAttribute="top" secondItem="NHA-bS-nRC" secondAttribute="bottom" constant="8" id="jnu-OQ-ivP"/>
                             <constraint firstItem="A6G-aK-8Ua" firstAttribute="leading" secondItem="lBC-Cd-P8x" secondAttribute="leadingMargin" constant="3" id="k12-qf-5pP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gXp-bj-j7s" secondAttribute="trailing" constant="7" id="lZS-yu-HEi"/>
                             <constraint firstItem="gXp-bj-j7s" firstAttribute="leading" secondItem="lBC-Cd-P8x" secondAttribute="leadingMargin" constant="7" id="lgw-Za-yMc"/>
                             <constraint firstItem="Bai-eV-ydR" firstAttribute="top" secondItem="gXp-bj-j7s" secondAttribute="bottom" constant="15" id="m5G-pI-H0S"/>
-                            <constraint firstItem="gXp-bj-j7s" firstAttribute="top" secondItem="A6G-aK-8Ua" secondAttribute="bottom" constant="15" id="qlc-DD-m2E"/>
+                            <constraint firstItem="gXp-bj-j7s" firstAttribute="top" secondItem="A6G-aK-8Ua" secondAttribute="bottom" constant="55" id="qlc-DD-m2E"/>
                             <constraint firstItem="Bai-eV-ydR" firstAttribute="top" secondItem="gXp-bj-j7s" secondAttribute="bottom" constant="15" id="t3g-Na-h4b"/>
+                            <constraint firstItem="93Z-eT-Ns8" firstAttribute="leading" secondItem="lBC-Cd-P8x" secondAttribute="leading" constant="5" id="toI-g5-IU5"/>
                             <constraint firstItem="QlH-aK-dgZ" firstAttribute="leading" secondItem="b2w-aM-Ful" secondAttribute="trailing" constant="8" id="ut0-yg-8I3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QE9-BZ-01j" secondAttribute="trailing" constant="3" id="w6z-Wb-QfR"/>
                             <constraint firstItem="gXp-bj-j7s" firstAttribute="leading" secondItem="lBC-Cd-P8x" secondAttribute="leadingMargin" constant="7" id="yzW-zJ-Kwr"/>
+                            <constraint firstAttribute="trailing" secondItem="93Z-eT-Ns8" secondAttribute="trailing" constant="5" id="zp6-Gl-eBS"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1339,6 +1349,7 @@
                         <outlet property="createReportButton" destination="gXp-bj-j7s" id="UWG-fg-7Yt"/>
                         <outlet property="departureAirportLabel" destination="b2w-aM-Ful" id="aFS-tk-87V"/>
                         <outlet property="flightDetailsContainerView" destination="naj-Kd-yz8" id="DaT-PB-yhY"/>
+                        <outlet property="overUnderWeightLabel" destination="93Z-eT-Ns8" id="Vhc-xK-F7g"/>
                         <outlet property="passengerCollectionView" destination="QE9-BZ-01j" id="39Y-Wx-Eod"/>
                         <outlet property="segmentControl" destination="NHA-bS-nRC" id="rzO-N3-wHt"/>
                         <outlet property="segmentControlHeightConstant" destination="tVA-Nz-acF" id="h4Z-Y3-9nq"/>
@@ -1632,7 +1643,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ADT-bk-eYT">
-                                <rect key="frame" x="16" y="20" width="343" height="324"/>
+                                <rect key="frame" x="16" y="20" width="343" height="323.5"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRv-fl-byk">
                                         <rect key="frame" x="15" y="15" width="313" height="30"/>
@@ -1678,7 +1689,7 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYe-gX-fWf">
-                                        <rect key="frame" x="15" y="269" width="313" height="40"/>
+                                        <rect key="frame" x="15" y="273.5" width="313" height="40"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="5vO-9t-CjZ"/>
@@ -1698,14 +1709,14 @@
                                     <constraint firstItem="PRv-fl-byk" firstAttribute="leading" secondItem="ADT-bk-eYT" secondAttribute="leading" constant="15" id="FFq-4f-PoK"/>
                                     <constraint firstAttribute="trailing" secondItem="SYe-gX-fWf" secondAttribute="trailing" constant="15" id="IPy-yQ-O9e"/>
                                     <constraint firstItem="PRv-fl-byk" firstAttribute="top" secondItem="ADT-bk-eYT" secondAttribute="top" constant="15" id="Lfu-br-bYB"/>
-                                    <constraint firstAttribute="bottom" secondItem="SYe-gX-fWf" secondAttribute="bottom" constant="15" id="aj2-V1-0jl"/>
+                                    <constraint firstAttribute="bottom" secondItem="SYe-gX-fWf" secondAttribute="bottom" constant="10" id="aj2-V1-0jl"/>
                                     <constraint firstItem="hi3-Dj-cxn" firstAttribute="centerY" secondItem="ADT-bk-eYT" secondAttribute="centerY" id="gUa-gB-idx"/>
                                     <constraint firstAttribute="trailing" secondItem="PRv-fl-byk" secondAttribute="trailing" constant="15" id="olf-EH-gI6"/>
                                     <constraint firstItem="hi3-Dj-cxn" firstAttribute="centerX" secondItem="ADT-bk-eYT" secondAttribute="centerX" id="pQa-Rd-GFF"/>
                                 </constraints>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tya-AT-Gxl">
-                                <rect key="frame" x="16" y="344" width="343" height="323"/>
+                                <rect key="frame" x="16" y="343.5" width="343" height="323.5"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qui-ub-UrD">
                                         <rect key="frame" x="15" y="15" width="313" height="30"/>
@@ -1717,7 +1728,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VQB-CR-R20">
-                                        <rect key="frame" x="101.5" y="132" width="140" height="60"/>
+                                        <rect key="frame" x="101.5" y="132.5" width="140" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73H-aC-ycg">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -1748,7 +1759,7 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wtd-4K-c6L">
-                                        <rect key="frame" x="15" y="268" width="313" height="40"/>
+                                        <rect key="frame" x="15" y="273.5" width="313" height="40"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="bug-iF-zTe"/>
@@ -1771,7 +1782,7 @@
                                     <constraint firstAttribute="trailing" secondItem="qui-ub-UrD" secondAttribute="trailing" constant="15" id="kPK-8X-SHB"/>
                                     <constraint firstItem="qui-ub-UrD" firstAttribute="leading" secondItem="Tya-AT-Gxl" secondAttribute="leading" constant="15" id="thB-Vd-z21"/>
                                     <constraint firstItem="VQB-CR-R20" firstAttribute="centerX" secondItem="Tya-AT-Gxl" secondAttribute="centerX" id="wNi-zm-zUp"/>
-                                    <constraint firstAttribute="bottom" secondItem="Wtd-4K-c6L" secondAttribute="bottom" constant="15" id="ywA-Ge-q87"/>
+                                    <constraint firstAttribute="bottom" secondItem="Wtd-4K-c6L" secondAttribute="bottom" constant="10" id="ywA-Ge-q87"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -2058,6 +2069,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="OiL-Td-JFQ"/>
-        <segue reference="ELt-yp-pXI"/>
+        <segue reference="YwN-Ik-6gk"/>
     </inferredMetricsTieBreakers>
 </document>

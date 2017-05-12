@@ -19,6 +19,8 @@ class EditFlightViewController: UIViewController, UICollectionViewDelegate, UICo
     @IBOutlet weak var flightDetailsContainerView: UIView!
     @IBOutlet weak var departureAirportLabel: UILabel!
     @IBOutlet weak var arrivalAirportLabel: UILabel!
+    @IBOutlet weak var overUnderWeightLabel: UILabel!
+    
     
     var flight: Flight?
     var plane: Plane?
@@ -136,6 +138,13 @@ class EditFlightViewController: UIViewController, UICollectionViewDelegate, UICo
             Toast.showNegativeMessage(message: "Flight Cannot Fly")
         }
         
+        let weightDifference = self.flight!.calcTakeoffWeight(plane: self.plane!) - Double(self.plane!.maxTakeoffWeight)
+        if weightDifference > 0.0 {
+            self.overUnderWeightLabel.text = "Over Max Weight by \(weightDifference) lbs"
+        } else {
+            self.overUnderWeightLabel.text = "Under Max Weight by \(weightDifference * -1) lbs"
+        }
+        
     }
     
     // Visual feedback to user that there is something wrong with the flight
@@ -187,16 +196,19 @@ class EditFlightViewController: UIViewController, UICollectionViewDelegate, UICo
             self.flightDetailsContainerView.isHidden = false
             self.passengerCollectionView.isHidden = true
             self.cargoContainerView.isHidden = true
+            self.overUnderWeightLabel.isHidden = true
         } else if segmentControl.selectedSegmentIndex == 1 {
             // Passenger seat view
             self.flightDetailsContainerView.isHidden = true
             self.passengerCollectionView.isHidden = false
             self.cargoContainerView.isHidden = true
+            self.overUnderWeightLabel.isHidden = false
         } else {
             // Cargo View
             self.flightDetailsContainerView.isHidden = true
             self.passengerCollectionView.isHidden = true
             self.cargoContainerView.isHidden = false
+            self.overUnderWeightLabel.isHidden = false
         }
     }
     
