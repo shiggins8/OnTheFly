@@ -42,10 +42,10 @@ class CustomPrintPageRenderer: UIPrintPageRenderer {
         let font = UIFont(name: "AmericanTypewriter-Bold", size: 30.0)
         
         // Specify some text attributes we want to apply to the header text.
-        let textAttributes = [NSFontAttributeName: font!, NSForegroundColorAttributeName: UIColor(red: 243.0/255, green: 82.0/255.0, blue: 30.0/255.0, alpha: 1.0), NSKernAttributeName: 7.5] as [String : Any]
+        let textAttributes = [NSAttributedStringKey.font.rawValue: font!, NSAttributedStringKey.foregroundColor: UIColor(red: 243.0/255, green: 82.0/255.0, blue: 30.0/255.0, alpha: 1.0), NSAttributedStringKey.kern: 7.5] as? [NSAttributedStringKey: Any]
         
         // Calculate the text size.
-        let textSize = getTextSize(text: headerText as String, font: nil, textAttributes: textAttributes as [String : AnyObject]!)
+        let textSize = getTextSize(text: headerText as String, font: nil, textAttributes: textAttributes)
         
         // Determine the offset to the right side.
         let offsetX: CGFloat = 20.0
@@ -67,7 +67,7 @@ class CustomPrintPageRenderer: UIPrintPageRenderer {
         
         let centerX = footerRect.size.width/2 - textSize.width/2
         let centerY = footerRect.origin.y + self.footerHeight/2 - textSize.height/2
-        let attributes = [NSFontAttributeName: font!, NSForegroundColorAttributeName: UIColor(red: 205.0/255.0, green: 205.0/255.0, blue: 205.0/255, alpha: 1.0)]
+        let attributes = [NSAttributedStringKey.font: font!, NSAttributedStringKey.foregroundColor: UIColor(red: 205.0/255.0, green: 205.0/255.0, blue: 205.0/255, alpha: 1.0)]
         
         footerText.draw(at: CGPoint(x: centerX, y: centerY), withAttributes: attributes)
         
@@ -83,14 +83,14 @@ class CustomPrintPageRenderer: UIPrintPageRenderer {
     
     
     
-    func getTextSize(text: String, font: UIFont!, textAttributes: [String: AnyObject]! = nil) -> CGSize {
+    func getTextSize(text: String, font: UIFont!, textAttributes: [NSAttributedStringKey: Any]! = nil) -> CGSize {
         let testLabel = UILabel(frame: CGRect(x: 0.0, y: 0.0, width: self.paperRect.size.width, height: footerHeight))
         if let attributes = textAttributes {
             testLabel.attributedText = NSAttributedString(string: text, attributes: attributes)
         }
         else {
             testLabel.text = text
-            testLabel.font = font!
+            testLabel.font = font
         }
         
         testLabel.sizeToFit()

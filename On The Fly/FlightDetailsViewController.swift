@@ -83,7 +83,7 @@ class FlightDetailsViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func datePickerValueChanged(_ sender: UIDatePicker){
+    @objc func datePickerValueChanged(_ sender: UIDatePicker){
         
         let dateFormatter: DateFormatter = DateFormatter()
         
@@ -275,7 +275,7 @@ class FlightDetailsViewController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
-    func keyboardWasShown(notification: NSNotification){
+    @objc func keyboardWasShown(notification: NSNotification){
         
         if activeField != nil {
             if self.textFields.contains(activeField!) {
@@ -304,7 +304,7 @@ class FlightDetailsViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    func keyboardWillBeHidden(notification: NSNotification){
+    @objc func keyboardWillBeHidden(notification: NSNotification){
         self.scrollView.setContentOffset(CGPoint.zero, animated: true)
     }
     
@@ -338,7 +338,7 @@ class FlightDetailsViewController: UIViewController, UITextFieldDelegate {
         textField.inputAccessoryView = keyboardToolbar
     }
     
-    func cancelPressed() {
+    @objc func cancelPressed() {
         if let activeTextField = self.activeField {
             if activeTextField == departAirportTextfield {
                 
@@ -372,7 +372,7 @@ class FlightDetailsViewController: UIViewController, UITextFieldDelegate {
     }
 
     
-    func donePressed() {
+    @objc func donePressed() {
         self.view.endEditing(true)
     }
     

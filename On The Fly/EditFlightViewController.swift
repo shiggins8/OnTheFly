@@ -166,7 +166,7 @@ class EditFlightViewController: UIViewController, UICollectionViewDelegate, UICo
         updateVisibleViews()
     }
     
-    func swipedLeft(_ gesture: UIGestureRecognizer) {
+    @objc func swipedLeft(_ gesture: UIGestureRecognizer) {
         switch self.segmentControl.selectedSegmentIndex {
             case 0:
                 segmentControl.selectedSegmentIndex = 1
@@ -178,7 +178,7 @@ class EditFlightViewController: UIViewController, UICollectionViewDelegate, UICo
         updateVisibleViews()
     }
     
-    func swipedRight(_ gesture: UIGestureRecognizer) {
+    @objc func swipedRight(_ gesture: UIGestureRecognizer) {
         switch self.segmentControl.selectedSegmentIndex {
         case 2:
             segmentControl.selectedSegmentIndex = 1
@@ -379,7 +379,7 @@ class EditFlightViewController: UIViewController, UICollectionViewDelegate, UICo
         return (seatToCheck.name == "Empty" && seatToCheck.weight == 0)
     }
     
-    func handleLongGesture(_ gesture: UILongPressGestureRecognizer) {
+    @objc func handleLongGesture(_ gesture: UILongPressGestureRecognizer) {
         
         switch(gesture.state) {
             
@@ -434,7 +434,7 @@ class EditFlightViewController: UIViewController, UICollectionViewDelegate, UICo
     
     func applyUserInterfaceChanges() {
         let font = UIFont.systemFont(ofSize: 18)
-        self.segmentControl.setTitleTextAttributes([NSFontAttributeName: font], for: .normal)
+        self.segmentControl.setTitleTextAttributes([NSAttributedStringKey.font: font], for: .normal)
         self.segmentControlHeightConstant.constant = 40
         self.segmentControl.layer.borderWidth = 2
         self.segmentControl.layer.borderColor = UIColor.white.cgColor

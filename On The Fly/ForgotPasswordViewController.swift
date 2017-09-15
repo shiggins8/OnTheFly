@@ -98,7 +98,7 @@ class ForgotPasswordViewController: UIViewController {
         textField.inputAccessoryView = keyboardToolbar
     }
     
-    func donePressed() {
+    @objc func donePressed() {
         self.view.endEditing(true)
     }
 

@@ -200,7 +200,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
-    func keyboardWasShown(notification: NSNotification){
+    @objc func keyboardWasShown(notification: NSNotification){
 
         self.scrollView.isScrollEnabled = true
         var info = notification.userInfo!
@@ -222,7 +222,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    func keyboardWillBeHidden(notification: NSNotification){
+    @objc func keyboardWillBeHidden(notification: NSNotification){
         self.scrollView.setContentOffset(CGPoint.zero, animated: true)
         self.scrollView.isScrollEnabled = false
     }
@@ -269,7 +269,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         textField.inputAccessoryView = keyboardToolbar
     }
     
-    func previousPressed() {
+    @objc func previousPressed() {
         switch activeField! {
         case confirmPasswordTextField:
             passwordTextField.becomeFirstResponder()
@@ -284,7 +284,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func nextPressed() {
+    @objc func nextPressed() {
         switch activeField! {
         case firstNameTextField:
             lastNameTextField.becomeFirstResponder()
@@ -299,7 +299,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func donePressed() {
+    @objc func donePressed() {
         self.view.endEditing(true)
     }
     
@@ -328,7 +328,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         activeField = nil
     }
     
-    func textFieldDidChange(textField : UITextField) {
+    @objc func textFieldDidChange(textField : UITextField) {
         if textField == self.passwordTextField {
             if textField.text!.characters.count < 8 {
                 textField.textColor = UIColor.red

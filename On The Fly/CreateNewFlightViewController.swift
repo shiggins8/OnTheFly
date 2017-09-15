@@ -100,7 +100,7 @@ class CreateNewFlightViewController: UIViewController, UIPickerViewDelegate, UIP
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         let titleData = pickerData[row].longName()
-        let myTitle = NSAttributedString(string: titleData, attributes: [NSForegroundColorAttributeName:UIColor.white])
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSAttributedStringKey.foregroundColor:UIColor.white])
         return myTitle
     }
     
@@ -252,7 +252,7 @@ class CreateNewFlightViewController: UIViewController, UIPickerViewDelegate, UIP
         }
     }
     
-    func textFieldDidChange(_ textField: UITextField) {
+    @objc func textFieldDidChange(_ textField: UITextField) {
         if textField.tag == 0 {
             if textField.text?.characters.count == 0 {
                 self.tableView.isHidden = true
@@ -359,7 +359,7 @@ class CreateNewFlightViewController: UIViewController, UIPickerViewDelegate, UIP
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
-    func keyboardWasShown(notification: NSNotification){
+    @objc func keyboardWasShown(notification: NSNotification){
         
         self.scrollView.isScrollEnabled = true
         var info = notification.userInfo!
@@ -390,7 +390,7 @@ class CreateNewFlightViewController: UIViewController, UIPickerViewDelegate, UIP
         
     }
     
-    func keyboardWillBeHidden(notification: NSNotification){
+    @objc func keyboardWillBeHidden(notification: NSNotification){
         self.scrollView.setContentOffset(CGPoint.zero, animated: true)
         self.scrollView.isScrollEnabled = false
     }
@@ -437,7 +437,7 @@ class CreateNewFlightViewController: UIViewController, UIPickerViewDelegate, UIP
         textField.inputAccessoryView = keyboardToolbar
     }
     
-    func previousPressed() {
+    @objc func previousPressed() {
         switch activeField! {
         case taxiFuelUsageTextfield:
             flowRateTextfield.becomeFirstResponder()
@@ -454,7 +454,7 @@ class CreateNewFlightViewController: UIViewController, UIPickerViewDelegate, UIP
         }
     }
     
-    func nextPressed() {
+    @objc func nextPressed() {
         switch activeField! {
         case departureArptTextfield:
             arrivalArptTextfield.becomeFirstResponder()
@@ -471,7 +471,7 @@ class CreateNewFlightViewController: UIViewController, UIPickerViewDelegate, UIP
         }
     }
     
-    func donePressed() {
+    @objc func donePressed() {
         self.view.endEditing(true)
     }
     

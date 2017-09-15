@@ -183,7 +183,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.passwordTextfield.rightView = showButton
     }
     
-    func swapPasswordVisibility() {
+    @objc func swapPasswordVisibility() {
         self.passwordTextfield.isSecureTextEntry = !self.passwordTextfield.isSecureTextEntry
     }
     
@@ -223,7 +223,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
-    func keyboardWasShown(notification: NSNotification){
+    @objc func keyboardWasShown(notification: NSNotification){
         //Need to calculate keyboard exact size due to Apple suggestions
         
         textPlaceholderLabel.text = activeField?.placeholder!
@@ -249,7 +249,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    func keyboardWillBeHidden(notification: NSNotification){
+    @objc func keyboardWillBeHidden(notification: NSNotification){
         self.scrollView.setContentOffset(CGPoint.zero, animated: true)
         self.scrollView.isScrollEnabled = false
     }
@@ -276,7 +276,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         textField.inputAccessoryView = keyboardToolbar
     }
     
-    func previousPressed() {
+    @objc func previousPressed() {
         switch activeField! {
         case passwordTextfield:
             usernameTextfield.becomeFirstResponder()
@@ -285,7 +285,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func nextPressed() {
+    @objc func nextPressed() {
         switch activeField! {
         case usernameTextfield:
             passwordTextfield.becomeFirstResponder()
@@ -294,7 +294,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func donePressed() {
+    @objc func donePressed() {
         self.view.endEditing(true)
     }
     

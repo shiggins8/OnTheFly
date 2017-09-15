@@ -119,7 +119,7 @@ class UpcomingFlightTableViewCell: UITableViewCell {
         self.showDetailedLabel()
         if let flight = self.flightForCell {
             
-            let titleAttributes = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: .headline), NSForegroundColorAttributeName: UIColor.black]
+            let titleAttributes = [NSAttributedStringKey.font: UIFont.preferredFont(forTextStyle: .headline), NSAttributedStringKey.foregroundColor: UIColor.black]
             
             let titleStrings: [String] = ["Date", "Dpt Arpt", "Arr Arpt", "Dpt Time", "Arr Time", "A/C No"]
             
@@ -155,7 +155,7 @@ class UpcomingFlightTableViewCell: UITableViewCell {
     }
     
     func makeSubtitleText(string: String) -> NSAttributedString {
-        let subtitleAttributes = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: .subheadline)]
+        let subtitleAttributes = [NSAttributedStringKey.font: UIFont.preferredFont(forTextStyle: .subheadline)]
         return NSAttributedString(string: string, attributes: subtitleAttributes)
     }
     
