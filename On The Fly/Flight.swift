@@ -24,7 +24,7 @@ struct Flight {
     var aftBaggageWeight: Int
     var taxiFuelBurn: Int
     let userid: String
-    let fireRef: FIRDatabaseReference?
+    let fireRef: DatabaseReference?
     
     init(plane: String, dptArpt: String, arvArpt: String, date: String, time: String, uid: String,
          startFuel: Double, flightDuration: Int, fuelFlow: Double, passengers: [String:[String:Any]],
@@ -45,7 +45,7 @@ struct Flight {
         self.fireRef = nil
     }
     
-    init(snapshot: FIRDataSnapshot) {
+    init(snapshot: DataSnapshot) {
         let snapshotValue = snapshot.value as! [String: Any]
         self.plane = snapshotValue["plane"] as! String
         self.departAirport = snapshotValue["departAirport"] as! String

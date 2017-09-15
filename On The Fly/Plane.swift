@@ -24,7 +24,7 @@ struct Plane {
     let fuelArm: Double
     let numSeats: Int
     let centerOfGravityEnvelope: [[String:Double]]
-    let fireRef: FIRDatabaseReference?
+    let fireRef: DatabaseReference?
     
     init(name: String, tailNumber: String, maxRampWeight: Int, maxTakeoffWeight: Int, emptyWeight: Int,
          emptyWeightArm: Double, pilotSeatsArm: Double, rowArms: [Double], frontBagArm: Double, aftBagArm: Double,
@@ -45,7 +45,7 @@ struct Plane {
         fireRef = nil
     }
     
-    init(snapshot: FIRDataSnapshot) {
+    init(snapshot: DataSnapshot) {
         let snapshotValue = snapshot.value as! [String: Any]
         self.name = snapshotValue["name"] as! String
         self.tailNumber = snapshotValue["tailNumber"] as! String

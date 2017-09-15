@@ -15,7 +15,7 @@ struct User {
     let email: String
     let firstName: String
     let lastName: String
-    let fireRef: FIRDatabaseReference?
+    let fireRef: DatabaseReference?
     
     init(uid: String, email: String, first: String, last: String) {
         self.uid = uid
@@ -25,7 +25,7 @@ struct User {
         self.fireRef = nil
     }
     
-    init(snapshot: FIRDataSnapshot) {
+    init(snapshot: DataSnapshot) {
         let snapshotValue = snapshot.value as! [String: Any]
         self.uid = snapshot.key 
         self.email = snapshotValue["email"] as! String

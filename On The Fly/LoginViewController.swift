@@ -73,7 +73,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
         } else {
             
-            FIRAuth.auth()?.signIn(withEmail: self.usernameTextfield.text!, password: self.passwordTextfield.text!) { (user, error) in
+            Auth.auth().signIn(withEmail: self.usernameTextfield.text!, password: self.passwordTextfield.text!) { (user, error) in
                 
                 if error == nil {
                     
@@ -112,7 +112,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 self.showActivityIndicatory()
                 let username = UserDefaults.standard.value(forKey: "username") as! String
                 let password = UserDefaults.standard.value(forKey: "password") as! String
-                FIRAuth.auth()?.signIn(withEmail: username, password: password) { (user, error) in
+                Auth.auth().signIn(withEmail: username, password: password) { (user, error) in
                     
                     if error == nil {
                         
@@ -311,12 +311,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     func syncPlanes() {
         // Sync the planes to the Global Database file
         GlobalVariables.sharedInstance.planeArray.removeAll(keepingCapacity: false)
-        let fireRef = FIRDatabase.database().reference()
+        let fireRef = Database.database().reference()
         let planeRef = fireRef.child("planes")
         
         planeRef.observeSingleEvent(of: .value, with: { (snapshot) in
             for value in snapshot.children {
-                GlobalVariables.sharedInstance.planeArray.append(Plane(snapshot: (value as! FIRDataSnapshot)))
+                GlobalVariables.sharedInstance.planeArray.append(Plane(snapshot: (value as! DataSnapshot)))
             }
         }) { (error) in
             print(error.localizedDescription)

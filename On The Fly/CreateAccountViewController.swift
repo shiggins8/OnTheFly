@@ -24,7 +24,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     
     var activeField: PaddedTextField?
     
-    var ref: FIRDatabaseReference = FIRDatabase.database().reference()
+    var ref: DatabaseReference = Database.database().reference()
     
     var loadingView: UIView = UIView()
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
@@ -83,12 +83,12 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
             if (userEmail.isValidEmail()) {
                 if (validPassword && validNames) {
                     // actually creating new user in firebase
-                    FIRAuth.auth()?.createUser(withEmail: userEmail, password: userPassword, completion: { (user: FIRUser?, error) in
+                    Auth.auth().createUser(withEmail: userEmail, password: userPassword) { (user, error) in
                         var title = ""
                         var message = ""
                         if error != nil {
                             title = "Oops!"
-                            message = (error?.localizedDescription)!
+                            message = (error!.localizedDescription)
                             self.hideActivityIndicator()
                             self.alert(message: message, title: title)
                         } else {
@@ -101,7 +101,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
                             message = "Account created."
                             self.alertDismissView(message: message, title: title)
                         }
-                    })
+                    }
                     
                 } else {
                     // not a valid password combo

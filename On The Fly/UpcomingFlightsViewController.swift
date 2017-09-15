@@ -16,7 +16,7 @@ class UpcomingFlightsViewController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var logoutButton: UIButton!
     
     var flights:[Flight] = [Flight]()
-    let flightsRef = FIRDatabase.database().reference(withPath: "flights")
+    let flightsRef = Database.database().reference(withPath: "flights")
     var flightToEdit: Flight?
     
     var messageView: UIView = UIView()
@@ -53,9 +53,9 @@ class UpcomingFlightsViewController: UIViewController, UITableViewDelegate, UITa
     // MARK: - Logout Button Coding
     
     @IBAction func logoutButtonPressed(_ sender: Any) {
-        if FIRAuth.auth()?.currentUser != nil {
+        if Auth.auth().currentUser != nil {
             do {
-                try FIRAuth.auth()?.signOut()
+                try Auth.auth().signOut()
                 print("You have successfully logged out")
                 
                 UserDefaults.standard.set(false, forKey: "rememberMeChecked")
@@ -80,8 +80,8 @@ class UpcomingFlightsViewController: UIViewController, UITableViewDelegate, UITa
             var newFlights: [Flight] = []
             
             for each in snapshot.children {
-                let newFlight = Flight(snapshot: each as! FIRDataSnapshot)
-                let uid = FIRAuth.auth()!.currentUser!.uid
+                let newFlight = Flight(snapshot: each as! DataSnapshot)
+                let uid = Auth.auth().currentUser!.uid
                 if newFlight.userid == uid {
                     newFlights.append(newFlight)
                 }

@@ -139,7 +139,7 @@ class CreateNewFlightViewController: UIViewController, UIPickerViewDelegate, UIP
                     dateFormatter.timeStyle = .short
                     let strTime = dateFormatter.string(from: datePicker.date)
                     let time = strTime
-                    let uid = FIRAuth.auth()?.currentUser?.uid
+                    let uid = Auth.auth().currentUser?.uid
                     
                     let emptySeatConfig: [String:[String:Double]] = [:]
                     
@@ -169,7 +169,7 @@ class CreateNewFlightViewController: UIViewController, UIPickerViewDelegate, UIP
                                            passengers: emptySeatConfig, frontBagWeight: 0, aftBagWeight: 0,
                                            taxiBurn: taxiBurn)
                     
-                    let fireRef = FIRDatabase.database().reference()
+                    let fireRef = Database.database().reference()
                     let flightRef = fireRef.child("flights")
                     let newFlightRef = flightRef.childByAutoId()
                     newFlightRef.setValue(newFlight.toAnyObject())

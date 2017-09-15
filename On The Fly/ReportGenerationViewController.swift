@@ -126,9 +126,9 @@ class ReportGenerationViewController: UIViewController, UITextFieldDelegate {
 
         registerForKeyboardNotifications()
 
-        if let userid = FIRAuth.auth()?.currentUser?.uid {
-            let ref = FIRDatabase.database().reference().child("users")
-            ref.child(userid).observe(FIRDataEventType.value, with: { (snapshot) in
+        if let userid = Auth.auth().currentUser?.uid {
+            let ref = Database.database().reference().child("users")
+            ref.child(userid).observe(DataEventType.value, with: { (snapshot) in
                 let userInfo = snapshot.value as! [String:Any]
                 self.emailTextfield.text = (userInfo["email"] as! String)
             })

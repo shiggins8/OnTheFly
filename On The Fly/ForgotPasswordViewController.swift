@@ -37,7 +37,7 @@ class ForgotPasswordViewController: UIViewController {
                 self.alert(message: "You have not entered an email in the text field above.", title: "Please try again")
             } else {
                 if userEmail.isValidEmail() {
-                    FIRAuth.auth()?.sendPasswordReset(withEmail: userEmail, completion: { (error) in
+                    Auth.auth().sendPasswordReset(withEmail: userEmail, completion: { (error) in
                         var title = ""
                         var message = ""
                         
